@@ -1,0 +1,22 @@
+{% extends 'Admin/adminhome.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="col-xl-8 col-lg-7">
+  <div class="card shadow mb-4">
+    <div class="card-header">
+      Add New Blog
+    </div>
+
+    <form method="POST">
+      {% csrf_token %}
+    <div class="card-body">
+      {{profile_form|crispy}} <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </div>
+      </form>
+  </div>
+</div>
+{% endblock %}
